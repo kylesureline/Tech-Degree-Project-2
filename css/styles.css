@@ -13,6 +13,11 @@ body {
   color: #414141;
 }
 
+h1,
+h3 {
+  font-family: 'Aleo', serif;
+}
+
 h1 {
   margin: 0;
   font-size: 1.6em;
@@ -66,10 +71,6 @@ p {
   padding: .6em 0;
 }
 
-.main-nav li a:hover {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-
 .main-header li {
   margin-bottom: 4px;
   background-color: white;
@@ -81,7 +82,13 @@ li {
 
 .footer-nav a {
   color: #414141;
-  padding: .6em 0;
+  padding: .6em .6em;
+}
+
+.footer-nav a:hover,
+.main-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
 .footer-nav {
@@ -122,6 +129,24 @@ a:link {
   padding-bottom: 2em;
 }
 
+#skills ul {
+  padding: 0 3em;
+}
+
+#skills li {
+  background: #747474;
+  color: white;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+#skills li:nth-child(odd) {
+  background: #e4e3e4;
+  color: black;
+}
+
 /* ---- Page Elements ---- */
 .menu-item,
 h2 {
@@ -138,6 +163,18 @@ h2 {
 }
 .col p {
   padding: 0 1em;
+}
+
+#skills li:before {
+  content: "# ";
+}
+
+#skills {
+  background-color: #576673;
+  padding-bottom: 2em;
+}
+#skills h2 {
+  color: white;
 }
 
 /* ---- Float clearfix ---- */
@@ -161,9 +198,6 @@ h2 {
     padding-top: 1em;
   }
   /* ---- Navigation ---- */
-  .main-nav li a:hover {
-    box-shadow: none;
-  }
   .main-nav li {
     display: inline;
     background-color: transparent;
@@ -244,12 +278,15 @@ h2 {
   header {
     padding: 2em 2em;
   }
+  .main-nav ul {
+    margin: 0;
+  }
   .main-nav {
     float: right;
   }
   .main-nav li a {
     margin: 0;
-    padding: 0;
+    padding: .6em .6em;
   }
   .main-nav li {
     padding-left: 2em;
